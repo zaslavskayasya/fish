@@ -1,0 +1,202 @@
+.col-2-header
+	// width: 49%;
+	display: flex;
+	text-align: right;
+	align-items: flex-end;
+	width: 50%;
+	justify-content: space-between
+
+// .col-empty 
+// 	width: 24%
+
+.line-right
+	border-right: dark-color 1px solid;
+
+.logo
+	width: 190px;
+	min-width: 190px;
+	display: block;
+	align-items: center;
+	// border-right: dark-color 1px solid;
+	img
+		width: 100%;
+
+.logo-block
+	width: 190px;
+	min-width: 210px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	border-right: dark-color 1px solid;
+
+.header
+	height: 70px;
+	border-bottom: dark-color 1px solid;
+	.container
+		height: 100%;
+
+.nav
+	padding-right 20px;
+	height: 100%;
+	.nav-ul
+		padding-left: 0px;
+		list-style: none;
+		display: flex;
+		justify-content: space-between
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		margin: 0px;
+	.nav-item:not(:last-child) 
+		margin-right: 50px
+	.nav-link 
+		transition: all 0.3s ease-in-out
+		font-family: inherit;
+		font-size: 17px;
+		font-weight: 500;
+		&:hover	
+			color: accent-color;	
+
+.lang-block
+	height: 100%;
+	display flex
+	margin 0px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-left 0px;
+	// width: 300px;
+	
+
+
+.lang-item
+	text-align: right 
+	font-weight: 400;
+	transition: all 0.3s ease-in-out;
+	padding-right 10px;
+	position: relative;
+	&:hover
+		text-shadow: 0px 0px 0px dark-color;
+	&.lang-active	
+		text-shadow: 0px 0px 0px dark-color; 
+
+.lang-item:not(:last-child):after
+	content: '/';
+	display: block;
+	position: absolute;
+	right:2px;
+	top:0px;
+
+
+.line-before
+	position: relative;
+
+.line-before:before
+	content: '';
+	position: absolute;	
+	top:0px;
+	left: -20px;
+	display: block;
+	height: 300px;
+	width: 1px;
+	background-color: dark-color;
+
+.burger-menu
+	display: none;
+	cursor: pointer;
+
+
+.burger-line
+	width: 30px;
+	height: 1px;
+	margin-bottom 10px;
+	background-color: dark-color;
+	display: block;
+	cursor: pointer;
+	transition: all ease-in-out 0.3s;
+
+
+.open-menu .burger-menu 
+	.burger-top 
+		transform: translateY(10px) rotate(-135deg);
+	
+	.burger-middle 
+		opacity: 0;
+		transform: rotate(135deg);
+	
+	.burger-bottom
+		transform: translateY(-12px) rotate(-45deg);
+	
+	
+@media (max-width 1400px)
+	.lang-block
+		padding-left: 50px;;
+	
+	.logo-block
+		border: none;
+	
+	.col-empty 	
+		display: none;
+	
+	
+
+
+@media (max-width: 970px)
+	.burger-menu
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 21px;	
+	.open-menu .burger-menu
+			background-color: accent-color;
+			height:50px;
+			width: 50px;
+			border-radius: 100%;		
+	.open-menu .burger-line
+		background-color: #fff;			
+	.open-menu .wrap-burger
+		top: 50%;
+		margin: 0 auto;
+		left: 50%;
+		display: block;
+		position: absolute;
+		transform: translateX(-50%) translateY(-36%);	
+	.col-2-header 
+		opacity :0px;
+		transform: translateY(-100%);
+		position: absolute;
+		background-color: #fff;
+		flex-direction: column;
+		padding: 150px 0px;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		align-items: center;
+		transition: all 0.3s ease;
+	.col.logo-block
+		width: 190px;		
+	.open-menu .col-2-header
+		display: flex;
+		transform: translateY(0%);	
+	.col-2-header		
+		.nav-item
+			margin-bottom 50px;		
+		.nav .nav-ul
+			flex-direction: column;
+			margin-bottom : 50px;		
+		.nav .nav-item:not(:last-child) 
+			margin-right: 0px;				
+	.line-before:before
+		display: none;	
+	.nav.line-right
+		border: none;	
+	.lang-block 
+		padding-left: 0px;	
+	.lang-item
+		padding: 0px 25px;
+	.lang-item:not(:last-child):after
+		content: '|';
+		display: block;
+		position: absolute;
+		right:0px;
+		top:0px;

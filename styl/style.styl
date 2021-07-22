@@ -1,0 +1,52 @@
+global-reset()
+
+@import "fonts.styl"
+@import "variables.styl"
+
+html 
+	height: 100%
+
+input
+select
+textarea
+	font-family inherit
+	font-size inherit
+	color inherit
+a
+	font-family inherit
+	text-decoration none
+	color inherit
+
+img
+	max-width 100%
+	height auto
+
+img:after
+	content: attr(alt)
+	font-family inherit
+	display: inline-block
+	font-size: 12px
+	
+body
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	background-color mainPage-color
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	color: dark-color;
+	min-height: 100vh;
+	justify-content: space-between;
+	overflow-x: hidden;
+	flex-direction: column;
+	height: 100%;
+
+
+
+@import "header.styl"
+
+@import "mainPage.styl"
+
+@import "footer.styl"
+
+@import "media.styl"
+	
