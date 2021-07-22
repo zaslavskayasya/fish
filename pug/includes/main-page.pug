@@ -268,21 +268,21 @@ section.form-section
                     .form-row
                         .form-item
                             label(for="invest-name").form-label.content-text
-                            input(type="text" pattern="[A-Za-z]{2,50}" required id="name"  placeholder="Введите ваше имя*" ).form-input.name.field.invest-name
+                            input(type="text" pattern="[A-Za-z]{2,50}" required id="name"  placeholder="Введите ваше имя*" ).form-input.name.field.name
                             span.error 1
                         .form-item
                             label(for="invest-mail").form-label.content-text 
-                            input(type="phone" required  pattern="[^@]+@[^@]+\.{2,6}" id="phone"  placeholder="Введите ваш телефон*" ).form-input.email.field.invest-mail
+                            input(type="email" required  pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="mail"  placeholder="Введите ваш телефон*" ).form-input.email.field
                             span.error 1
                         .form-item
                             label(for="invest-mail").form-label.content-text 
-                            input(type="email" required  pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="mail"  placeholder="Введите ваш email*" ).form-input.email.field.invest-mail
+                            input(type="phone" required  pattern="[^@]+@[^@]+\.{2,6}" id="phone"  placeholder="Введите ваш email*" ).form-input.email.field.mail
                             span.error 1
                         .form-item
                             label(for="invest-name").form-label.content-text
-                            input(type="text" pattern="[A-Za-z]{2,50}" required id="name"  placeholder="Сообщение" ).form-input.name.field.invest-name
+                            input(type="text" pattern="[A-Za-z]{2,50}" required id="name"  placeholder="Сообщение" ).form-input.name.field
                             span.error 1
-                        button(href="").link-to.send-btn 
+                        button(href="").link-to.send-btn(id="next-btn-thank") 
                             span отправить
     .step-third.form-section-paddings.hide
         .container

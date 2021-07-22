@@ -338,21 +338,21 @@
               <div class="form-row">
                 <div class="form-item">
                   <label class="form-label content-text" for="invest-name"></label>
-                  <input class="form-input name field invest-name" type="text" pattern="[A-Za-z]{2,50}" required id="name" placeholder="Введите ваше имя*"><span class="error">1</span>
+                  <input class="form-input name field name" type="text" pattern="[A-Za-z]{2,50}" required id="name" placeholder="Введите ваше имя*"><span class="error">1</span>
                 </div>
                 <div class="form-item">
                   <label class="form-label content-text" for="invest-mail"> </label>
-                  <input class="form-input email field invest-mail" type="phone" required pattern="[^@]+@[^@]+.{2,6}" id="phone" placeholder="Введите ваш телефон*"><span class="error">1</span>
+                  <input class="form-input email field" type="email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" id="mail" placeholder="Введите ваш телефон*"><span class="error">1</span>
                 </div>
                 <div class="form-item">
                   <label class="form-label content-text" for="invest-mail"> </label>
-                  <input class="form-input email field invest-mail" type="email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" id="mail" placeholder="Введите ваш email*"><span class="error">1</span>
+                  <input class="form-input email field mail" type="phone" required pattern="[^@]+@[^@]+.{2,6}" id="phone" placeholder="Введите ваш email*"><span class="error">1</span>
                 </div>
                 <div class="form-item">
                   <label class="form-label content-text" for="invest-name"></label>
-                  <input class="form-input name field invest-name" type="text" pattern="[A-Za-z]{2,50}" required id="name" placeholder="Сообщение"><span class="error">1</span>
+                  <input class="form-input name field" type="text" pattern="[A-Za-z]{2,50}" required id="name" placeholder="Сообщение"><span class="error">1</span>
                 </div>
-                <button class="link-to send-btn" href=""> <span>отправить</span></button>
+                <button class="link-to send-btn" href="" id="next-btn-thank"> <span>отправить</span></button>
               </div>
             </form>
           </div>
