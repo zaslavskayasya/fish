@@ -27,7 +27,15 @@
 	.medium_header
 		margin-bottom -10px	
 	.column-2-text .text-col
-		width: 49%;	
+		width: 49%;
+	.image-part
+		background: accent-color
+		overflow hidden
+		max-width: 700px
+		img 
+			width: 100%
+			display: block
+			transform: scale(1.4) translateX(-16%) translateY(7%);
 
 .wrap-text-and-image
 	width: 100%
@@ -335,14 +343,14 @@ svg.portfolio-star
 	height: 50px
 	display: block
 	margin: 10px
-	background-image: url('./img/arrow-small.svg')!important
+	background-image: url('./../img/arrow-small.svg')!important
 	background-color: #fff
 	background-repeat: no-repeat
 	background-position center
 	transition: all ease-in-out 0.3s
 
 .owl-carousel .owl-nav button.owl-next span
-	background-image: url('./img/arrow-small-right.svg')!important
+	background-image: url('./../img/arrow-small-right.svg')!important
 
 .owl-carousel .owl-nav button.owl-prev:hover span,
 .owl-carousel .owl-nav button.owl-next:hover span
