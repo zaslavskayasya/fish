@@ -1,4 +1,4 @@
-section.site_name_section 
+section.site_name_section
     .container.top-section.flex
         // Этот заголовок СКРЫТ на мобильных 
         .col-2.tablet-hide.hide-owl
@@ -14,10 +14,11 @@ section.site_name_section
                 br
                 | продакшен!
 section.video-section 
-    video(class="main_video" id="video" loop autoplay src='./media/videocompress.mp4' )
+    video(class="main_video" id="video" loop autoplay muted src='./media/videocompress.mp4')
 // Контент этого блока перестраивается в карусель с планшета и ниже
 // .hide-owl - блок Скрыт в слайдере 
 // .only-owl - блока виден только в слайдере
+.wrapper.hide
 .owl-carousel-top
     div.what_fish-section.item
         .container.flex
@@ -338,3 +339,4 @@ section.form-section
                 p.hedaer-white                    
                     span.white-letter 
                         | Спасибо, Ваш запрос принят, скоро мы свяжемся с вами!
+div(data-wrapper-point="end")
