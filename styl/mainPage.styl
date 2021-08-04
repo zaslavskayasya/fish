@@ -18,6 +18,7 @@
 .video-section
 	position: relative
 	overflow-x hidden
+	// background: url('./../img/poster.jpg')
 
 // first description
 .what_fish-section
@@ -30,13 +31,24 @@
 	.column-2-text .text-col
 		width: 49%;
 	.image-part
-		background: accent-color
+		background: #CD092D;
 		overflow hidden
-		max-width: 700px
+		max-width: 690px
+		height 530px
 		img 
 			width: 100%
 			display: block
 			transform: scale(1.4) translateX(-16%) translateY(7%);
+
+// svg.arrow-animate
+// 	animation: rotateArrow 1s 12s ease-in-out infinite
+
+
+// @keyframes rotateArrow
+// 	0%
+// 		transform: rotate(-90deg)
+// 	100%
+// 		transform: rotate(0deg)
 
 .wrap-text-and-image
 	width: 100%
@@ -65,6 +77,14 @@
 		padding-top: 10px;
 		padding: 10px 23px 0px 0px;	
 
+.love-section .col-3-right
+	.item
+		.arrow-animate
+			transition: all ease-in-out 0.3s
+	.item:hover
+		.arrow-animate
+			transform: translateY(20px)
+		
 
 .col-3-right.quote
 	display: block
@@ -181,7 +201,13 @@ svg.portfolio-star
 		&:hover 
 			.illustration
 				opacity: 1
-				transform: scale(1)
+				transform: scale(1) translateY(-50%)
+			.normal_text
+				text-shadow: 0px 0px 1px dark-color	
+		&:focus
+			.illustration
+				opacity: 1
+				transform: scale(1) translateY(-50%)
 			.normal_text
 				text-shadow: 0px 0px 1px dark-color	
 
@@ -190,10 +216,10 @@ svg.portfolio-star
 	.illustration
 		position: absolute
 		left: 100px;
-		width: 200px
-		top:-50%
+		width: 170px
+		top:50%
 		opacity: 0
-		transform: scale(0)
+		transform: scale(0) translateY(-50%)
 		transition: all 0.3s ease-in-out 
 		img 
 			width: 100%
@@ -218,9 +244,10 @@ svg.portfolio-star
 	justify-content: center
 	width: 335px
 	height: 335px
-	border: 0.5px solid dark-color
+	border: 1px solid dark-color
 	cursor: pointer;
 	margin-bottom 20px;
+	overflow hidden
 	// padding: 20px;
 	.video-themes-img
 		position: absolute
@@ -246,7 +273,8 @@ svg.portfolio-star
 			height: 335px
 			width: 335px
 			z-index: -1
-
+.video-themes-item.no-border
+	overflow visible
 
 @keyframes rotate 
 	0% 
@@ -325,10 +353,11 @@ svg.portfolio-star
 	display: flex
 	align-items: center
 	justify-content: center
-	height: 350px;
+	// height: 250px;
+	margin-bottom: 60px
 .owl-image
-	width: 150px
-	max-width: 200px;
+	width: 250px
+	max-width: 250px;
 
 .owl-nav
 	position: absolute;
@@ -434,7 +463,9 @@ svg.portfolio-star
 	cursor: pointer
 	span 
 		color: #fff
-
+.recall-link
+	span 
+		color: #fff
 
 .recall-link, .send-btn
 	 
@@ -588,7 +619,8 @@ input:-webkit-autofill:active{
 		.text-part 
 			max-width: 70%;
 		.image-part
-			max-width: 600px	
+			max-width: 580px
+			height: 468px	
 	.what_fish-section .big-header.margin
 		margin-bottom: 29px;
 	.what_fish-section .column-2-text .text-col
@@ -675,6 +707,7 @@ input:-webkit-autofill:active{
 		max-width: 254px;
 	.what_fish-section .image-part
 		max-width: 518px;
+		height: 414px;
 	.love-section
 		padding-top: 50px;
 	.love-section .normal_text
@@ -692,7 +725,7 @@ input:-webkit-autofill:active{
 	.portfolio-section .medium_header_3
 		margin-bottom: 30px;
 	.portfolio-item
-		margin-bottom: 32px;
+		margin-bottom: 15px;
 	.portfolio-btn
 		bottom: -34px;
 		right: 0px;
@@ -711,7 +744,7 @@ input:-webkit-autofill:active{
 	.steps-block .illustration
 		width: 112px;
 		left: 70px;
-		top: -15%;
+		// top: -15%;
 	.video-themes-item
 		width: 24%;
 		height: 229px;
@@ -747,6 +780,7 @@ input:-webkit-autofill:active{
 		z-index: 9999	
 	.what_fish-section .image-part
 		max-width: 417px;
+		height: auto
 	.col-3-right
 		padding-bottom 30px
 	.portfolio-section
@@ -763,9 +797,12 @@ input:-webkit-autofill:active{
 	.big-header_2.big-header_46.empty-letter.no-margin
 		margin-bottom: 30px;
 	.rules-section 
-		margin-bottom 10px	
+		margin-bottom 10px
+	.brand-section
+		padding-top: 31px;
 	.owl-ite
-		height: 250px;
+		margin-bottom 20px;
+	// 	height: 250px;
 	.form-section-paddings.step-first
 		padding-top: 50px;
 		padding-bottom: 50px;
@@ -785,7 +822,10 @@ input:-webkit-autofill:active{
 	.what_fish-section .medium_header
 		margin-bottom: 20px;
 		margin-top: 47px;
-
+.only-owl
+	display: none
+.hide-owl
+	display: block		
 @media (max-width: 780px)
 	.top-section .text_middle
 		max-width: 100%;
@@ -793,6 +833,25 @@ input:-webkit-autofill:active{
 		font-size: 35px;
 		padding-top: 76px;
 		line-height: 44px;
+	.only-owl
+		display: block
+	.hide-owl
+		display: none
+	.owl-carousel-top
+		margin-bottom 70px;	
+	.big-header.empty-letter.crative 
+		padding-top 9px
+		font-size: 30px;
+	.video-section
+		background: #000	
+	// .site_name_section
+	// 	padding-bottom 0px;		
+	.big-header.mobile-header
+		font-size: 32px;
+		line-height: 34px;
+		margin-bottom: 0px;
+	.love-section
+		padding-top 43px	
 	.main_video
 		min-height: 350px;
 		width: 820px;
@@ -811,6 +870,8 @@ input:-webkit-autofill:active{
 			padding-left 0px
 			svg  
 				display: none
+
+
 	.love-section 
 		.col-2
 			width: 100%;
@@ -819,8 +880,23 @@ input:-webkit-autofill:active{
 			margin-top: 0;
 	.owl-carousel .owl-nav button.owl-next span, .owl-carousel .owl-nav button.owl-prev span	
 		width: 57px;
-		height: 21px;
+		max-height: 21px;
 		background-size 40px;
+	.owl-carousel .owl-item img
+		width: auto;
+		height: 400px;
+		margin: 0 auto;	
+	.what_fish-section .column-2-text .text-col
+		margin-top 10px;	
+	.what_fish-section .medium_header
+		font-size: 16px;
+		padding-top 10px;
+	.owl-nav
+		bottom: -50px;	
+	.what_fish-section .column-2-text .text-col
+		font-size: 14px;
+	.what_fish-section .owl-nav
+		bottom: -12px		
 	.col-3-right.quote
 		padding-top: 127px;
 		padding-left: 44px;	
@@ -852,7 +928,7 @@ input:-webkit-autofill:active{
 	.steps-block .illustration
 		width: 70px;
 		left: 0px;
-		top: 19px;
+		// top: 19px;
 	.steps-block .step .normal_text
 		padding: 10px 0px;
 		font-size: 16px;
@@ -897,19 +973,24 @@ input:-webkit-autofill:active{
 			width: 100%	
 			margin-bottom 20px;
 	.link-to
-		padding: 22px 40px;
-		border-radius: 100%;
-		margin-left: 9px;
-		margin-top: 16px;
-		border: none;
-		span 
-			font-size: 14px;
+		margin: 20px 0px
+	// 	padding: 22px 40px;
+	// 	border-radius: 100%;
+	// 	margin-left: 9px;
+	// 	margin-top: 16px;
+	// 	border: none;
+	// 	span 
+	// 		font-size: 14px;
 	.form-section .hedaer-white
 		max-width: 600px;
 		width: 100%;
 		border: none;
-		margin: auto;
-
+		margin: 0px auto 40px;
+	.step-first
+		.col-3-right
+			justify-content: center
+			.links
+				flex-direction: column
 
 
 @media (max-width: 550px)
@@ -920,14 +1001,20 @@ input:-webkit-autofill:active{
 		padding-top: 76px;
 		line-height: 44px;
 	.what_fish-section
-		padding-top: 34px;
+		padding-top: 40px;
 		padding-bottom 0px
+		.big-header.empty-letter
+			font-size: 30px;
+		.big-header
+			font-size: 29px;	
 	.what_fish-section .small_header
 		margin-bottom: 23px;	
 	.big-header.empty-letter
-		font-size: 31px;
+		font-size: 26px;
 	.big-header
-		font-size: 30px;
+		font-size: 26px;
+	.steps-block
+		padding-bottom :26px;	
 	.what_fish-section .medium_header
 		margin-bottom: 0px;
 		margin-top: 15px;
@@ -940,17 +1027,20 @@ input:-webkit-autofill:active{
 		padding-top: 0px;
 		.medium_header_3
 			font-size: 20px;
+			margin-bottom: 22px;
 			
 	.video-themes-item.no-border
 		margin-top 50px
+	.quote-section
+		padding 30px	
 	.quote-section .container
 		justify-content: flex-start;
 	.quote-section .col-3-right.quote
-		padding-left 0px;
+		padding-left 20px;
 		padding-top 30px
 		padding-bottom 35px
 	.quote-section .col-3-right.quote:before
-		left -19px
+		left : 0px
 		top:-173px	
 	.col-3-right.quote
 		padding-left 0px;
@@ -959,8 +1049,8 @@ input:-webkit-autofill:active{
 		top: -75px;	
 	.closer-section .text-part
 		padding-top 60px;
-	.big-header
-		font-size: 26px;	
+	// .big-header
+	// 	font-size: 26px;	
 	.rules-item .rules
 		width: 300px;
 		padding-right: 0px;
@@ -970,17 +1060,22 @@ input:-webkit-autofill:active{
 	.medium_header_3
 		font-size: 20px;	
 	.hedaer-white
-		font-size: 22px	
-	.link-to span
-		font-size: 12px;
-	.link-to
-		padding: 16px 19px;
-		border-radius: 100%;	
+		font-size: 20px;		
+	// .link-to span
+	// 	font-size: 12px;
+	// .link-to
+	// 	padding: 16px 19px;
+	// 	border-radius: 100%;	
 	.form-section .hedaer-white
 		max-width: 320px;
 		width: 100%;
 		border: none;
-		margin: 0px;
+		margin: 0px 0px 60px 0px;
+	.form-section .step-first
+		padding-top 100px;
+	.link-to
+		margin: 20px 0px 10px;
+	
 	.copy
 		font-size: 12px;
 	.video-themes-item.no-border
@@ -988,7 +1083,12 @@ input:-webkit-autofill:active{
 		overflow: hidden;
 		height: 297px;
 		margin-bottom: 20px;
-
+	.owl-carousel .owl-nav button.owl-next span, .owl-carousel .owl-nav button.owl-prev span
+		width: 34px;
+		height: 11px;
+		background-size: 28px;
+	.portfolio-section
+		padding-top 8px;
 
 
 @media (max-width: 340px)
