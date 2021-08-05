@@ -1,20 +1,26 @@
-let point = document.createElement('span');
-point.dataset.wrapper = 'end';
-document.body.appendChild(point);
+let start_point = document.createElement('span'),
+	end_point = document.createElement('span');
 
-let {clientHeight} = wrapper = document.querySelector('.wrapper'),
-	startPoint = document.body.querySelector('.what_fish-section').offsetTop,
-	endPoint = document.body.querySelector('[data-wrapper="end"]').offsetTop;
+start_point.dataset.wrapper = 'start',
+start_point.style.top = '-150px';
+end_point.dataset.wrapper = 'end';
+
+let fishSection = document.body.querySelector('.what_fish-section'),
+	formSection = document.body.querySelector('section.form-section');
+
+fishSection.after(start_point);
+formSection.after(end_point);
+
+let {clientHeight: height, offsetTop: wrapperTop} = wrapper = document.querySelector('.wrapper'),
+	start = document.body.querySelector('[data-wrapper="start"]'),
+	end = document.body.querySelector('[data-wrapper="end"]');
 
 let moving = function(){
-		if (scrollY >= 1385) {
-			wrapper.style.display = 'block';
+		if (scrollY >= fishSection.offsetTop - start.offsetTop && scrollY < end.offsetTop) {
+			wrapper.style.opacity = 1;
+			wrapper.style.backgroundPositionY = wrapperTop - (scrollY - start.offsetTop) + 'px';
 		} else {
-			wrapper.style.display = 'none';
-		}
-		
-		if (scrollY >= startPoint){
-			wrapper.style.height = clientHeight - scrollY + 'px';
+			wrapper.style.opacity = 0;
 		}
 	};
 

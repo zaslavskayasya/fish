@@ -1,2 +1,2 @@
-.wrapper{position:fixed;z-index:-1;top:650px;left:50%;transform:translateX(-50%);width:98vw;height:6950px;overflow:hidden;background:#fff url("../img/line.svg") no-repeat center bottom}
+span[data-wrapper=start]{position:relative}.wrapper{position:fixed;z-index:-1;top:0;left:50%;transform:translateX(-50%);width:95%;height:50vh;background:#fff url("../img/line.svg") no-repeat center top;background-size:cover;opacity:0;transition:opacity 0.1s ease-out}
 /*# sourceMappingURL=line.css.map */
