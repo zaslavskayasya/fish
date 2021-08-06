@@ -30,6 +30,7 @@
 		margin-bottom -10px	
 	.column-2-text .text-col
 		width: 49%;
+		background: #fff;
 	.image-part
 		background: #CD092D;
 		overflow hidden
@@ -72,15 +73,27 @@
 		flex-direction: column
 	.big-header 
 		margin-bottom 14px	
+		z-index: 9;
+		position: relative;
+		background: #fff;
 	.normal_text 
 		line-height: 26px;
 		padding-top: 10px;
 		padding: 10px 23px 0px 0px;	
+	.medium_header_2
+		z-index: 9
+		position: relative
+		background: #fff	
 
 .love-section .col-3-right
+	z-index: 9
+	position: relative
 	.item
 		.arrow-animate
 			transition: all ease-in-out 0.3s
+			background: #fff;
+			z-index: 9;
+			position: relative;
 	.item:hover
 		.arrow-animate
 			transform: translateY(20px)
@@ -91,6 +104,13 @@
 	padding-top: 150px
 	position: relative
 	padding-bottom 60px
+	.big-header
+		background: #fff
+		z-index: 9
+		position: relative
+
+
+	
 
 .col-3-right.quote:before
 	content: url("./../img/quote.svg")
@@ -127,6 +147,7 @@
 	margin-top -4px
 	padding: 10px
 	display: block
+	background: #fff;
 	.normal_text
 		span 
 			font-weight: 700
@@ -231,6 +252,9 @@ svg.portfolio-star
 	.medium_header_3
 		max-width: 400px;
 		margin-bottom: 59px;
+		background: #fff
+		z-index 9
+		position: relative
 
 .video-themes
 	display: flex;
@@ -249,6 +273,8 @@ svg.portfolio-star
 	margin-bottom 20px;
 	overflow hidden
 	// padding: 20px;
+	background: #fff
+
 	.video-themes-img
 		position: absolute
 		width: 100%
@@ -303,8 +329,15 @@ svg.portfolio-star
 	overflow-x hidden
 	.big-header.big-header_46,
 	.big-header_2.big-header_46.empty-lette
+		background: #fff
+		z-index: 9
+		position relative
 		margin: 0px;
 	.no-margin
+		margin: 0px;
+		background: #fff
+		z-index: 9
+		position relative
 		margin: 0px;
 	.container.flex
 		display: flex;	
@@ -321,6 +354,8 @@ svg.portfolio-star
 	align-items: center
 	border-bottom: 0.5px solid #202020;
 	padding: 0px 0px;
+	background: #fff;
+	z-index: 9
 	.rules
 		width: 300px
 		padding-right: 50px;
@@ -355,6 +390,8 @@ svg.portfolio-star
 	justify-content: center
 	// height: 250px;
 	margin-bottom: 60px
+	background: #fff
+	z-index: 9
 .owl-image
 	width: 250px
 	max-width: 250px;
@@ -397,6 +434,9 @@ svg.portfolio-star
 		display: inline-block
 	.col-3-right.quote 
 		padding-top 108px;
+		background: #fff
+		z-index: 9
+		position: relative
 	.col-3-right.quote:before
 		top: -136px
  .big-header.empty-letter 
@@ -891,7 +931,7 @@ input:-webkit-autofill:active{
 		background-size 40px;
 	.owl-carousel .owl-item img
 		width: auto;
-		height: 400px;
+		height: auto;
 		margin: 0 auto;	
 	.what_fish-section .column-2-text .text-col
 		margin-top 10px;	
