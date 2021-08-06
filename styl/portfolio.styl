@@ -1,0 +1,89 @@
+.portfolio__title {
+	display: block;
+	font-size: 26px;
+	margin-top: 100px;
+}
+
+.articles
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: 20px;
+	grid-auto-columns: 560px
+	justify-items: center
+	align-items: center
+	transition: all .5s ease-in-out
+
+.content
+	margin-top: 40px
+
+	&__video
+		display: grid
+		width: 100%
+
+		.thumbnails
+			position relative
+			display: block
+
+			&__play
+				position absolute
+				cursor: pointer
+				top: 50%
+				left: 50%
+				transform: translateY(-50%) translateX(-50%)
+
+			&__background
+				display: block
+				width: 100%
+				height: 35vmin
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-color: #000;
+				background-size: 75vmin;
+
+		iframe
+			justify-self: center
+			align-self: center
+			width: 100%
+			height: 35vmin
+
+	&__title
+		margin 10px 0 20px
+		transition: all .5s ease-in-out
+
+	&__description
+		font-size: 18px
+		margin: 10px 0
+		transition: all .5s ease-in-out
+
+@media (max-width: 1080px)
+	contentSize = .96rem
+
+	.content
+		&__title
+			font-size: contentSize
+
+		&__description
+			font-size: contentSize
+
+@media (max-width: 780px)
+	contentSize = 1.1rem
+
+	.articles
+		grid-template-columns: 1fr
+
+	.content
+		&__title
+			font-size: contentSize
+
+		&__description
+			font-size: contentSize
+
+@media (max-width: 550px)
+	contentSize = 1.1rem
+
+	.content
+		&__title
+			font-size: contentSize
+
+		&__description
+			font-size: contentSize
