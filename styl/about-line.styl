@@ -1,0 +1,22 @@
+.wrapper-line
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95vw;
+    height: 0;
+    background: url('../img/about-line.svg') no-repeat center top;
+    background-size: 91%;
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
+    pointer-events: none;
+
+@media (max-width: 1440px)
+    .wrapper-line
+        width: 100vw;
+        background-size: 100%;
+
+@media (max-width: 1280px)
+    .wrapper-line
+        width: 96%;
+        background-size: 160vmin;
