@@ -1,0 +1,193 @@
+.brif-section
+    padding-top 77px;
+    .medium_header_3
+        margin-bottom: 60px
+    .step-name    
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 131%;
+        /* or 42px */
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        /* black */
+        color: #202020;
+        max-width: 35%
+        margin-bottom : 23px;
+
+.brif-step
+    margin-bottom : 60px;
+
+.form_radio_btn {
+	display: inline-block;
+	margin-right: 10px;
+    transition: all ease 0.3s
+}
+.form_radio_btn input[type=radio] {
+	display: none;
+    transition: all ease 0.3s
+}
+.form_radio_btn label {
+	display: inline-block;
+	cursor: pointer;
+	width: 100%;
+	// line-height: px;
+	border: 1px solid dark-color;
+	border-radius: 0px;
+	user-select: none;
+    height: 173px
+    display: flex;
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    transform: translateY(0px)
+    text-align center;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    transition: all ease 0.3s
+    line-height: 130%;
+    color: dark-color;
+}
+.form_radio_btn .hidden
+    opacity: 0
+    height: 0px;
+    transform: translateY(50px)
+    transition: all linear 0.3s
+    font-size: 14px
+    line-height: 14px;
+
+.form_radio_btn:hover 
+    transition: all ease 0.3s
+    .hidden
+        opacity: 1
+        height: auto;
+        transform: translateY(0px)
+
+.form_radio_btn .subdescription
+    font-size: 16px
+    font-weight: 400
+
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+	background: #E25043;
+    color: #fff;
+}
+ 
+/* Hover */
+.form_radio_btn label:hover {
+	color: #666;
+}
+ 
+/* Disabled */
+.form_radio_btn input[type=radio]:disabled + label {
+	background: #efefef;
+	color: #666;
+}
+
+
+.wrap-brif-step
+    display: flex;
+    width: 100%;
+    .form_radio_btn
+        width: 25%;
+
+
+.idea-step
+    display: flex;
+    width: 100%;
+    .form_radio_btn
+        width: 49%;
+
+.three-part-step
+    display: flex;
+    width: 100%;
+    .form_radio_btn
+        width: 33%;
+
+.brif-step
+    textarea 
+        width: 100%
+        color: #000
+        min-height 200px
+        resize: vertical
+        padding: 10px 0px 10px 10px
+        box-sizing: border-box
+.go-to-command
+    .big-header
+        max-width: 46%
+
+
+@media (max-width: 1400px)
+    .brif-section .step-name
+        max-width: 45%
+
+@media (max-width: 1200px)
+    .form_radio_btn label
+        font-size: 18px
+        line-height: 101%
+
+@media (max-width: 980px)
+    .wrap-brif-step 
+        flex-flow: wrap
+        justify-content: space-between
+        .form_radio_btn
+            margin: 5px 0px
+            width 49%       
+    .brif-section .step-name
+        max-width: 100%    
+        font-size: 28px     
+
+@media (max-width: 780px)
+    .wrap-brif-step 
+        .form_radio_btn           
+            width 100%    
+    .idea-step
+        flex-flow: wrap
+        width: 100%
+        justify-content: space-between
+        .form_radio_btn
+            margin: 5px 0px
+            width: 100%;
+
+    .three-part-step
+        flex-flow: wrap
+        justify-content: space-between
+        .form_radio_btn
+            width: 100%;     
+            margin: 5px 0px 
+    .form_radio_btn
+        position: relative 
+    .plus:after
+        content: '+'
+        color: #000         
+        font-family: inherit
+        font-size: 40px
+        font-weight: 200
+        display: block      
+        position: absolute
+        right: 0px
+        bottom: 10px;
+    .form_radio_btn input[type=radio]:checked+.plus:after
+        content: '+'
+        display: block;
+        color: #fff;
+    .brif-section
+        padding-top: 11px;   
+    .brif-section .medium_header_3
+        margin-bottom: 27px;   
+    .brif-section .step-name
+        max-width: 100%;
+        font-size: 22px;
+        line-height: 31px; 
+    .form_radio_btn label
+        height: 125px
+    .brif-step
+        margin-bottom: 36px;
+    .go-to-command .big-header
+        max-width: 100%;
+
+    
+

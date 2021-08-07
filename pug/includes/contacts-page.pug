@@ -1,0 +1,52 @@
+section.contact-section 
+    .container
+        h2.medium_header_3
+            | Контакты
+        .contacts-frame 
+            .contacts-part.contacts-part-line
+                .contacts-line
+                    p.cont-name Телефон
+                    .cont-item 
+                        a.cont-link(href="tel:+380676593459") +38 (067) 659-34-59
+                        a.cont-link(href="tel:+380667414474") +38 (066) 741-4474
+                        a.cont-link(href="tel:+380937258539") +38 (093) 725-8539
+                .contacts-line
+                    p.cont-name Email
+                    .cont-item 
+                        a.cont-link(href="mailto:info@fish-ua.com?subject=FISH SITE КОНТАКТЫ") info@fish-ua.com
+                .contacts-line
+                    p.cont-name Офис
+                    .cont-item 
+                        a.cont-link(href="https://goo.gl/maps/nLd6BQwzNDSid1UE7") г.Киев, ул.Голосеевская, 7, корпус 3
+
+            .contacts-part
+                .map
+                    iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.10171799301!2d30.519753115942745!3d50.4019418987398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4a178d9625%3A0xfc133672b95f3a2!2z0YPQuy4g0JPQvtC70L7RgdC10LXQstGB0LrQsNGPLCA3LCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1628265717816!5m2!1sru!2sua'  style='border:0;' allowfullscreen='' loading='lazy')
+
+section.go-to-command 
+    .container 
+        h2.big-header(class="wow fadeInUp" data-wow-offset="00")
+            | У вас ВозНикли вопросы? Заполните форму!
+        .go-to-form-wrap
+            p.small_header(class="wow fadeInUp" data-wow-offset="00")
+            .wrap-form.light-form 
+                form.form(action="" novalidate).formWithValidation.novalidate.contactForm
+                    .form-row
+                        .form-item
+                            label(for="invest-name").form-label.content-text
+                            input(type="text" pattern="[A-Za-z]{2,50}" required id="name"  placeholder="Введите ваше имя*" ).form-input.name.field.name
+                            span.error 1
+                        .form-item
+                            label(for="invest-mail").form-label.content-text 
+                            input(type="email" required  pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="mail"  placeholder="Введите ваш телефон*" ).form-input.email.field
+                            span.error 1
+                        .form-item
+                            label(for="invest-mail").form-label.content-text 
+                            input(type="phone" required  pattern="[^@]+@[^@]+\.{2,6}" id="phone"  placeholder="Введите ваш email*" ).form-input.email.field.mail
+                            span.error 1
+                        .form-item
+                            label(for="invest-name").form-label.content-text
+                            input(type="text" pattern="[A-Za-z]{2,50}" required id="name"  placeholder="Сообщение" ).form-input.name.field
+                            span.error 1
+                        button(href="").link-to.send-btn(id="next-btn-thank") 
+                            span отправить
