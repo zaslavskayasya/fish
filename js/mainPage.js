@@ -12,11 +12,28 @@ video.addEventListener('click', function(){
 }, false);
 
 
-let buttonNext = document.getElementById('next-btn') ;
+// let buttonNext = document.getElementById('next-btn') ;
 
-buttonNext.addEventListener('click', function(){
-    document.querySelector('.step-first').classList.add('hide');
-    document.querySelector('.step-second').classList.remove('hide');
+// buttonNext.addEventListener('click', function(){
+//     document.querySelector('.step-first').classList.add('hide');
+//     document.querySelector('.step-second').classList.remove('hide');
 
-});
+// });
 
+
+  $('#slider-vertical').slick({
+    infinite: true,
+    vertical: false,
+    arrows: false,
+    dots: true,
+    asNavFor: '#slider-gorizont'
+  }); 
+
+ $('#slider-gorizont').slick({
+    infinite: true,
+    arrows: false,
+    verticalSwiping: false,
+    dots: true,
+    asNavFor: '#slider-vertical'
+    // autoplay: true,
+    });
