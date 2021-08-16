@@ -42,33 +42,41 @@ vSlider.slick({
 
 let vcs, hcs, vsc, hsc,
 	touchStartX = 0,
-	touchEndX = 0;
+	touchStartY = 0,
+	touchEndX = 0,
+	touchEndY = 0;
 
 hSlider
 	.on('touchstart', e => {
-		touchStartX = e.changedTouches[0].screenX;
+		touchStartX = e.changedTouches[0].screenX,
+		touchStartY = e.changedTouches[0].screenY;
 	})
 	.on('touchend', e => {
 		touchEndX = e.changedTouches[0].screenX,
+		touchEndY = e.changedTouches[0].screenY,
 		vcs = vSlider.slick('getSlick').currentSlide,
 		hcs = hSlider.slick('getSlick').currentSlide,
 		vsc = vSlider.slick('getSlick').slideCount-1,
 		hsc = hSlider.slick('getSlick').slideCount-1;
 
 		let screenX = e.currentTarget.clientWidth,
-			proc = Math.round(screenX * .27);
+			proc = Math.round(screenX * .15),
+			verticalTouch = Math.abs(touchEndY - touchStartY),
+			horizontalTouch = Math.abs(touchEndX - touchStartX);
 
-		if (touchEndX < touchStartX - proc) {
-			if (0 === hcs && vcs === vsc) {
-				hSlider.slick('slickNext');
-				if (vcs !== 0)
-					vSlider.slick('slickGoTo', 0);
-			} else if (0 === hcs)
-				vSlider.slick('slickNext');
-		} else if (touchEndX - proc > touchStartX) {
-			if (0 !== hcs && vcs !== vsc)
-				hSlider.slick('slickPrev');
-			else if (0 !== vcs)
-				vSlider.slick('slickPrev');
+		if (horizontalTouch >= verticalTouch) {
+			if (touchEndX < touchStartX - proc) {
+				if (0 === hcs && vcs === vsc) {
+					hSlider.slick('slickNext');
+					if (vcs !== 0)
+						vSlider.slick('slickGoTo', 0);
+				} else if (0 === hcs)
+					vSlider.slick('slickNext');
+			} else {
+				if (0 !== hcs && vcs !== vsc)
+					hSlider.slick('slickPrev');
+				else if (0 !== vcs)
+					vSlider.slick('slickPrev');
+			}
 		}
 });
