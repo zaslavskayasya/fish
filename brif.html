@@ -142,19 +142,19 @@
             <div class="step-name">ВИДЕО ЭФФЕКТЫ (согласно фирменного стиля бренда)</div>
             <div class="wrap-brif-step">
               <div class="form_radio_btn" ontouchstart="">
-                <input id="radio-19" type="radio" name="mounting" value="1">
+                <input id="radio-19" type="checkbox" name="mounting" value="1">
                 <label for="radio-19"> <span class="wisible">Анимированный логотип </span><span class="hidden"> </span></label>
               </div>
               <div class="form_radio_btn" ontouchstart="">
-                <input id="radio-20" type="radio" name="mounting" value="2">
+                <input id="radio-20" type="checkbox" name="mounting" value="2">
                 <label for="radio-20"> <span class="wisible">Плашки с текстом</span><span class="hidden"> </span></label>
               </div>
               <div class="form_radio_btn" ontouchstart="">
-                <input id="radio-21" type="radio" name="mounting" value="3">
+                <input id="radio-21" type="checkbox" name="mounting" value="3">
                 <label for="radio-21"> <span class="wisible">Переходы                               </span><span class="hidden"></span></label>
               </div>
               <div class="form_radio_btn" ontouchstart="">
-                <input id="radio-22" type="radio" name="mounting" value="4">
+                <input id="radio-22" type="checkbox" name="mounting" value="4">
                 <label for="radio-22"> <span class="wisible">Субтитры/Титры</span><span class="hidden"> </span></label>
               </div>
             </div>
@@ -163,15 +163,15 @@
             <div class="step-name">МУЗЫКА, голос, звуки</div>
             <div class="three-part-step">
               <div class="form_radio_btn" ontouchstart="">
-                <input id="radio-23" type="radio" name="sound" value="1">
+                <input id="radio-23" type="checkbox" name="sound" value="1">
                 <label for="radio-23"> <span class="wisible">Голос диктора (М/Ж)  </span><span class="hidden"> </span></label>
               </div>
               <div class="form_radio_btn" ontouchstart="">
-                <input id="radio-24" type="radio" name="sound" value="2">
+                <input id="radio-24" type="checkbox" name="sound" value="2">
                 <label for="radio-24"> <span class="wisible">SFX </span><span class="hidden"> (дополненный звуковой ряд и аудио эффекты)</span></label>
               </div>
               <div class="form_radio_btn" ontouchstart="">
-                <input id="radio-25" type="radio" name="sound" value="3">
+                <input id="radio-25" type="checkbox" name="sound" value="3">
                 <label for="radio-25"> <span class="wisible">Музыка с авторскими правами                              </span><span class="hidden"></span></label>
               </div>
             </div>
@@ -193,11 +193,23 @@
               </div>
             </div>
           </div>
-          <div class="brif-step text">
+          <div class="brif-step text">              
             <div class="step-name">Информация, которую вы хотите добавить от себя</div>
+            <div class="form-item">
+              <label class="form-label content-text" for="invest-name"></label>
+              <input class="form-input name field name" type="text" pattern="[A-Za-z]{2,50}" required id="name" placeholder="Введите ваше имя*"><span class="error">1</span>
+            </div>
+            <div class="form-item">
+              <label class="form-label content-text" for="invest-mail"> </label>
+              <input class="form-input email field" type="email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" id="mail" placeholder="Введите ваш телефон*"><span class="error">1</span>
+            </div>
+            <div class="form-item">
+              <label class="form-label content-text" for="invest-mail"> </label>
+              <input class="form-input email field mail" type="phone" required pattern="[^@]+@[^@]+.{2,6}" id="phone" placeholder="Введите ваш email*"><span class="error">1    </span>
+            </div>
             <textarea class="textarea" placeholder="Введите сообщение..."></textarea>
           </div>
-          <button class="link-to send-btn" href="" id="next-btn-thank"> <span>отправить</span></button>
+          <button class="link-to send-btn" href="" id="brif-send"> <span>отправить</span></button>
         </form>
       </div>
     </section>

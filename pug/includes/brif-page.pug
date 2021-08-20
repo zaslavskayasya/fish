@@ -121,22 +121,22 @@ section.brif-section
                     | ВИДЕО ЭФФЕКТЫ (согласно фирменного стиля бренда)
                 .wrap-brif-step
                     .form_radio_btn(ontouchstart="")
-                        input#radio-19(type='radio' name='mounting' value='1' )
+                        input#radio-19(type='checkbox' name='mounting' value='1' )
                         label(for='radio-19') 
                             span.wisible Анимированный логотип 
                             span.hidden 
                     .form_radio_btn(ontouchstart="")
-                        input#radio-20(type='radio' name='mounting' value='2')
+                        input#radio-20(type='checkbox' name='mounting' value='2')
                         label(for='radio-20') 
                             span.wisible Плашки с текстом
                             span.hidden  
                     .form_radio_btn(ontouchstart="")
-                        input#radio-21(type='radio' name='mounting' value='3')
+                        input#radio-21(type='checkbox' name='mounting' value='3')
                         label(for='radio-21') 
                             span.wisible Переходы                               
                             span.hidden
                     .form_radio_btn(ontouchstart="")
-                        input#radio-22(type='radio' name='mounting' value='4' )
+                        input#radio-22(type='checkbox' name='mounting' value='4' )
                         label(for='radio-22') 
                             span.wisible Субтитры/Титры
                             span.hidden 
@@ -145,17 +145,17 @@ section.brif-section
                     | МУЗЫКА, голос, звуки
                 .three-part-step
                     .form_radio_btn(ontouchstart="")
-                        input#radio-23(type='radio' name='sound' value='1' )
+                        input#radio-23(type='checkbox' name='sound' value='1' )
                         label(for='radio-23') 
                             span.wisible Голос диктора (М/Ж)  
                             span.hidden 
                     .form_radio_btn(ontouchstart="")
-                        input#radio-24(type='radio' name='sound' value='2')
+                        input#radio-24(type='checkbox' name='sound' value='2')
                         label(for='radio-24') 
                             span.wisible SFX 
                             span.hidden  (дополненный звуковой ряд и аудио эффекты)
                     .form_radio_btn(ontouchstart="")
-                        input#radio-25(type='radio' name='sound' value='3')
+                        input#radio-25(type='checkbox' name='sound' value='3')
                         label(for='radio-25') 
                             span.wisible Музыка с авторскими правами                              
                             span.hidden
@@ -178,11 +178,23 @@ section.brif-section
                         label(for='radio-28') 
                             span.wisible Не надо, и так сойдет                            
                             span.hidden
-            .brif-step.text
+            .brif-step.text               
                 .step-name
                     | Информация, которую вы хотите добавить от себя
+                .form-item
+                    label(for="invest-name").form-label.content-text
+                    input(type="text" pattern="[A-Za-z]{2,50}" required id="name"  placeholder="Введите ваше имя*" ).form-input.name.field.name
+                    span.error 1
+                .form-item
+                    label(for="invest-mail").form-label.content-text 
+                    input(type="email" required  pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="mail"  placeholder="Введите ваш телефон*" ).form-input.email.field
+                    span.error 1
+                .form-item
+                    label(for="invest-mail").form-label.content-text 
+                    input(type="phone" required  pattern="[^@]+@[^@]+\.{2,6}" id="phone"  placeholder="Введите ваш email*" ).form-input.email.field.mail
+                    span.error 1    
                 textarea.textarea(placeholder="Введите сообщение...")
-            button(href="").link-to.send-btn(id="next-btn-thank") 
+            button(href="").link-to.send-btn(id="brif-send") 
                 span отправить
 
 

@@ -41,20 +41,10 @@
 			display: block
 			transform: scale(1.4) translateX(-16%) translateY(7%);
 
-// svg.arrow-animate
-// 	animation: rotateArrow 1s 12s ease-in-out infinite
-
-
-// @keyframes rotateArrow
-// 	0%
-// 		transform: rotate(-90deg)
-// 	100%
-// 		transform: rotate(0deg)
-
 .wrap-text-and-image
 	width: 100%
 	position: relative;
-	background: #fff;
+	// background: #fff;
 .text-part
 	position relative
 	z-index: 9
@@ -193,6 +183,16 @@ svg.portfolio-star
 	.text-part
 		padding-top:110px
 		padding-bottom: 250px;
+		position: relative
+		&:before 
+			content: ""
+			position: absolute;
+			height: 336px;
+			left: -7px;
+			top: 99px;
+			width: 304px;
+			z-index: -1;
+			background: #fff;
 	.big-header 
 		margin-bottom 0px	
 	.image-part
@@ -343,6 +343,7 @@ svg.portfolio-star
 		z-index: 9
 		position relative
 		margin: 0px;
+		text-transform: uppercase;
 	.container.flex
 		display: flex;	
 		justify-content: flex-end;
@@ -406,6 +407,10 @@ svg.portfolio-star
 	bottom: -50px;
 	display: flex
 
+.owl-carousel
+	background-color: #fff
+.owl-theme .owl-nav [class*='owl-']:hover
+	background: transparent;
 
 .owl-carousel .owl-nav button.owl-prev span,
 .owl-carousel .owl-nav button.owl-next span

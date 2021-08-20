@@ -3,5 +3,6 @@ $('.owl-carousel').owlCarousel({
     margin:10,
     nav:true,
     items: 1,
+    dots: false
    
 })

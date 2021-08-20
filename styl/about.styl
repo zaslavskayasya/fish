@@ -31,13 +31,39 @@
 
 .what-about
     padding: 110px 0px  
-    background: url('./../img/logoback.png');
+    // background: url('./../img/logoback.png');
     background-repeat: no-repeat
     background-size: 900px;
     background-position left 
     .big-header
         font-size: 54px;
         line-height: 70px;  
+    .container 
+        position: relative;    
+        .back-fish 
+            position: absolute
+            z-index -1
+            max-width: 1014px
+            top 30px
+            left:-82px;
+            animation: flyFish 9s 2s ease infinite
+
+
+@keyframes flyFish 
+    0%
+        transform: translateX(0px) translateY(0px)
+    20% 
+        transform: translateX(50px) translateY(70px)
+    40% 
+        transform: translateX(70px) translateY(50px)
+    60% 
+        transform: translateX(50px) translateY(70px)
+    100%
+        transform: translateX(0px) translateY(0px)
+
+.story-about
+    .wrap-header
+        background #fff
 
 .services-row
     display: flex;
@@ -79,6 +105,7 @@
         width: 33%;
         border-bottom: 1px solid dark-color;
         margin-bottom 35px;
+        padding-bottom 23px;
     .person-img
         border-radius: 100%;
         width: 100%;
@@ -93,8 +120,11 @@
         font-size: 24px;
         line-height: 130%;
         color: dark-color;
+        background-color: #fff
         span 
             font-weight: bold;
+    .normal_text 
+        background-color: #fff;        
 .choose-command
     padding: 80px 0px 453px;  
     .big-header
@@ -116,7 +146,9 @@
             font-family: inherit;
             font-style: normal;
             font-weight: normal;
-            font-size: 24px;
+            font-size: 22px;
+            padding-top: 11px;
+            margin-top: 14px;
             line-height: 130%;
             /* or 31px */
             letter-spacing: 0.03em;
@@ -138,6 +170,25 @@
 .go-to-form-wrap 
     display: flex;
     justify-content: space-between
+
+.choose-command .owl-nav
+    right: -28px;
+    bottom: -85px;
+
+.choose-command 
+    .owl-carousel .owl-nav button.owl-next span, .owl-carousel .owl-nav button.owl-prev span
+        border: 1px solid #202020;
+        padding: 10px 20px;
+        border-radius: 100%;
+        width: 91px;
+        height: 36px;
+        display: block;
+        margin: 10px 17px 10px;  
+    .choose-command .owl-nav
+        right: 0px;
+    .big-header
+        background-color:  #fff    
+
 
 @media (max-width: 1450px)
     .about-top
@@ -174,17 +225,17 @@
         max-width: 95%;    
     .rewiew-section
         max-width: 600px;
-        margin-top: 5px;
+        // margin-top: 5px;
     .choose-command
         padding: 80px 0px 340px;
-        .big-header
-            line-height: 47px
+        // .big-header
+        //     line-height: 47px
     .go-to-command
         padding: 100px 0px 52px;    
     .choose-command
         padding: 40px 0px 340px;    
         .owl-nav
-            right: 50px;
+            right: 0px;
             bottom: -85px
 
 @media (max-width: 1350px)
@@ -195,7 +246,7 @@
     .choose-command
         padding: 40px 0px 340px;    
         .owl-nav
-            right: 50px;
+            right: 0px;
             bottom: -85px;
 
 @media (max-width: 970px)
@@ -226,7 +277,7 @@
             font-size: 16px;
     .choose-command .big-header
         max-width: 80%;
-        line-height: 43px;
+        line-height: 130%;
     .rewiew-section
         max-width: 600px;
         margin-top: 20px;    
@@ -269,11 +320,6 @@
     .about-top .h1-about
         font-size: 40px;
         margin: 0px 0px 25px;
-    // .burger-menu
-    //     display: block;
-    //     position: absolute;
-    //     right: 48px;
-    //     top: 17px;
     .skroll-text-wrap
         margin-right: 24px;  
     .skroll-icon
@@ -313,7 +359,7 @@
         padding: 20px 0px 412px;    
     .choose-command .big-header
         max-width: 100%;
-        line-height: 36px;
+        line-height: 130%;
         font-size: 28px;
     .rewiew-section .owl-carousel .rew-text
         font-size: 18px;
@@ -332,7 +378,7 @@
         line-height: 130%;
         margin: 10px 0px;   
     .choose-command .owl-nav
-        right: 50px;
+        right: 0px;
         bottom: -58px;     
 
 @media (max-width: 400px)

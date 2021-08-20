@@ -19,23 +19,27 @@
 .brif-step
     margin-bottom : 60px;
 
-.form_radio_btn {
-	display: inline-block;
-	margin-right: 10px;
+.form_radio_btn 
+    display: inline-block;
+    margin-right: 10px;
     transition: all ease 0.3s
-}
+
 .form_radio_btn input[type=radio] {
-	display: none;
+    display: none;
     transition: all ease 0.3s
 }
-.form_radio_btn label {
-	display: inline-block;
-	cursor: pointer;
-	width: 100%;
-	// line-height: px;
-	border: 1px solid dark-color;
-	border-radius: 0px;
-	user-select: none;
+.form_radio_btn input[type=checkbox] {
+    display: none;
+    transition: all ease 0.3s
+}
+.form_radio_btn label
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    // line-height: px;
+    border: 1px solid dark-color;
+    border-radius: 0px;
+    user-select: none;
     height: 173px
     display: flex;
     flex-direction: column
@@ -50,11 +54,17 @@
     transition: all ease 0.3s
     line-height: 130%;
     color: dark-color;
-}
+    &:hover 
+        background-color: accent-color
+        color: #fff
+        span  
+            color: #fff
+
 .form_radio_btn .hidden
     opacity: 0
     height: 0px;
-    transform: translateY(50px)
+    color: #fff;
+    // transform: translateY(50px)
     transition: all linear 0.3s
     font-size: 14px
     line-height: 14px;
@@ -64,27 +74,32 @@
     .hidden
         opacity: 1
         height: auto;
-        transform: translateY(0px)
+        // transform: translateY(0px)
 
 .form_radio_btn .subdescription
     font-size: 16px
     font-weight: 400
 
+
 /* Checked */
 .form_radio_btn input[type=radio]:checked + label {
-	background: #E25043;
+    background: #E25043;
     color: #fff;
 }
- 
+ /* Checked */
+.form_radio_btn input[type=checkbox]:checked + label {
+    background: #E25043;
+    color: #fff;
+}
 /* Hover */
 .form_radio_btn label:hover {
-	color: #666;
+    color: #666;
 }
  
 /* Disabled */
 .form_radio_btn input[type=radio]:disabled + label {
-	background: #efefef;
-	color: #666;
+    background: #efefef;
+    color: #666;
 }
 
 
@@ -93,7 +108,6 @@
     width: 100%;
     .form_radio_btn
         width: 25%;
-
 
 .idea-step
     display: flex;
@@ -117,7 +131,13 @@
         box-sizing: border-box
 .go-to-command
     .big-header
-        max-width: 46%
+        max-width: 50%
+
+.brif-step.text  
+    .form-item , input
+        background-color: #fff
+#brif-send
+    margin-right 0px;    
 
 
 @media (max-width: 1400px)

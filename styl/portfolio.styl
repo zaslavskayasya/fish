@@ -4,6 +4,13 @@
 	margin-top: 100px;
 }
 
+.content__title.small_header
+	text-transform: none;
+
+.content__description
+	font-size: 18px;
+	line-height: 23px;
+
 .articles
 	display: grid
 	grid-template-columns: 1fr 1fr
@@ -16,6 +23,17 @@
 
 .content
 	margin-top: 40px
+	width: 100%
+	.all-video
+		display: flex;
+		font-size: 18px;
+		line-height: 22px;
+		span 
+			margin-right 5px;
+		.link 
+			color: accent-color
+			text-decoration: underline
+			text-transform: uppercase	
 
 	&__video
 		display: grid
@@ -48,7 +66,7 @@
 			height: 35vmin
 
 	&__title
-		margin 10px 0 20px
+		margin: 15px 0 23px;
 		transition: all .5s ease-in-out
 
 	&__description
