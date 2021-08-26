@@ -27,7 +27,7 @@ let vSlider = $('#slider-vertical'),
 hSlider.slick({
 	infinite: false,
 	vertical: false,
-	arrows: true,
+	arrows: false,
 	dots: true,
 	swipe: false,
 });
@@ -35,7 +35,7 @@ hSlider.slick({
 vSlider.slick({
 	infinite: false,
 	arrows: false,
-	dots: true,
+	dots: false,
 	cssEase: 'linear',
 	swipe: false
 });

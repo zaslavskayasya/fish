@@ -1,28 +1,49 @@
 let fish = document.querySelector('img[alt="fish"]');
 
-if (fish) {
-    window.addEventListener('scroll', function(e){
-        let offset = this.pageYOffset;
-        
-        let state = {
-            0: "00",
-            820: "01",
-            860: "02",
-            900: "03",
-            940: "04",
-            980: "05",
-            1020: "06",
-            1060: "07",
-            1100: "08",
-            1140: "09",
-            1180: "10",
-            1220: "11",
-            1260: "12",
-            1300: "13"
-        };
+let src = num => `./img/lfish/1_00${num}.svg`;
 
-        for ([keyOffset, pic] of Object.entries(state))
-            if (keyOffset <= offset)
-                fish.src = `./img/lfish/1_00${pic}.svg`;
+function zeroPad(num, places) {
+    var zero = places - num.toString().length + 1;
+    return Array(+(zero > 0 && zero)).join("0") + num;
+}
+
+if (fish) {
+    let start, index, step, stepOffset, responsives = [];
+
+    step = 12;
+
+    if (innerWidth > 1380){
+        start = 720,
+        stepOffset = 60;
+    } else if (innerWidth <= 768) {
+        start = 385,
+        stepOffset = 50;
+    } else if (innerWidth <= 1024) {
+        start = 335,
+        stepOffset = 50;
+    } else if (innerWidth <= 1280) {
+        start = 600,
+        stepOffset = 50;
+    } else if (innerWidth <= 1380) {
+        start = 420,
+        stepOffset = 50;
+    }
+
+    index = start;
+
+    for (let i = 0; i < step; i++) {
+        responsives.push(index);
+        index += stepOffset;
+    }
+
+    window.addEventListener('scroll', function(e){
+        let scry = Math.round(scrollY);
+        for (let i = 0; i < responsives.length; i++) {
+            if (scry >= responsives[0]-stepOffset && scry <= responsives[responsives.length-1]+stepOffset)
+                if (responsives[i] <= scry)
+                    fish.src = src(zeroPad(i, 2));
+        }
+
+        // console.log(scry, start);
     });
 }
